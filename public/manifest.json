@@ -1,0 +1,20 @@
+{
+  "short_name": "Krypto",
+  "name": "Krypto Project",
+  "icons": [
+    {
+      "src": "krypto-icon.ico",
+      "sizes": "128x128",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "../src/coin_img.jpg",
+      "type": "image/jpg",
+      "sizes": "1884x1152"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
