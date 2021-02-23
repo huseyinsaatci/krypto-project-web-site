@@ -55,7 +55,7 @@ class CoinTable extends Component {
         //const corsProxy = "https://cors-anywhere.herokuapp.com/"
         const corsProxy = "https://thingproxy.freeboard.io/fetch/"
         const apiLink = "https://heroku-vue-express.herokuapp.com/coins/relevant";
-        const resultLink = corsProxy + apiLink;
+        const resultLink = apiLink;
         const response = await fetch(resultLink);
         let json = await response.json();
         this.setState({ data: json });
