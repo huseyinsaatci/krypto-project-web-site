@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { createChart } from 'lightweight-charts';
+require('dotenv').config();
 
 class Chart extends Component {
     constructor(props) {
@@ -62,6 +63,7 @@ class Chart extends Component {
     }
 
     async fetchData() {
+        const corsProxy = "https://arcane-temple-76069.herokuapp.com/"
         const apiLink = "https://api.nomics.com/v1/currencies/sparkline";
         const apiKey = "key=" + process.env.REACT_APP_API_KEY;
         const coinToFetch = "ids=" + this.props.id;
@@ -69,7 +71,7 @@ class Chart extends Component {
         const startDate = "start=" + dateInterval[0];
         const endDate = "end=" + dateInterval[1];
         const hourSuffix = "T00%3A00%3A00Z";
-        const resultLink = apiLink + "?" + apiKey + "&" + coinToFetch + "&" + startDate + hourSuffix + "&" + endDate + hourSuffix;
+        const resultLink = corsProxy + apiLink + "?" + apiKey + "&" + coinToFetch + "&" + startDate + hourSuffix + "&" + endDate + hourSuffix;
         const response = await fetch(resultLink);
         const json = await response.json();
         const readyChartData = (json) => {
