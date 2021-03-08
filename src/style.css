@@ -8,7 +8,7 @@ table { border-collapse: collapse; border-spacing: 0;}
 
 a {
     text-decoration: none;
-    color: #333;
+    color: #d4d4d4;
 }
 
 ul {
@@ -20,24 +20,17 @@ ul {
 }
 
 .footer a{
-    color: #fff;
+    color: #d4d4d4;
 }
+
+.dark-b{
+    background-color: #131722;
+}
+
 
 .font {
     font-family: 'Poppins', sans-serif;
-}
-
-.gradient{
-    color:azure;
-    background:  #002240;
-    background: -moz-linear-gradient(-45deg, #1C6EA4 0%, #2A753F 100%);
-    background: -webkit-linear-gradient(-45deg, #1C6EA4 0%, #2A753F 100%);
-    background: linear-gradient(135deg, #1C6EA4 0%, #2A753F 100%);
-}
-
-.icon{
-    height: 25px;
-    width:25px;
+    color: #d4d4d4;
 }
 
 .list-border{
@@ -69,13 +62,11 @@ ul {
 
 .horizontal-center{
     display: block;
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .percentage{
-    height:max-content;
-    width: max-content;
     padding: 0.3rem;
     color: #fff;
 }
@@ -89,7 +80,7 @@ ul {
 }
 
 .green-b{
-    background-color: #16c784;
+    background-color: #1b8059;
 }
 
 .blue-b{
@@ -97,7 +88,7 @@ ul {
 }
 
 .pastel{
-    opacity: 0.6;
+    opacity: 0.7;
 }
 
 .input{
@@ -119,12 +110,27 @@ ul {
     border-top-right-radius: 10px;
 }
 
+.rad-10-left{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.rad-10-right{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
 .rad-10-bottom{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
-.icon-crypto{
+.icon{
+    height: 25px;
+    width:25px;
+}
+
+.icon-big{
     font-size: 40px;
 }
 
@@ -137,6 +143,38 @@ ul {
     font-size: 19px;
 }
 
-.dark-blue-b{
-    background-color: #00021c;
+.fs-7{
+    font-size: 13px;
 }
+
+.rad-5{
+    border-radius: 5px;
+}
+
+.p-0_5{
+    padding: 2px;
+}
+
+.dark-blue-b{
+    background-color: #0e1029;
+}
+
+.b-dark-gradienty{
+    background-image: linear-gradient(135deg, #21284a 0%, #332640 100%);
+}
+
+.b-dark-gradientx{
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.dark-gradient-b{
+    background: #485563;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #102438, #485563);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #102438, #485563); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+

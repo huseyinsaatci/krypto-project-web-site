@@ -9,8 +9,43 @@ class Chart extends Component {
     }
 
     async componentDidMount() {
-        this.chart = createChart(this.ref.current, { width: 500, height: 250 });
-        this.areaSeries = this.chart.addAreaSeries();
+        this.chart = createChart(this.ref.current, {
+            width: 550,
+            height: 395,
+        });
+        this.chart.applyOptions(
+            {
+                layout: {
+                    backgroundColor: '#131722',
+                    textColor: '#d1d4dc',
+                    fontSize: 12,
+                    fontFamily: 'Poppins',
+                },
+                grid: {
+                    vertLines: {
+                        color: 'rgba(42, 46, 57, 0)',
+                    },
+                    horzLines: {
+                        color: 'rgba(42, 46, 57, 0.6)',
+                    },
+                }, rightPriceScale: {
+                    scaleMargins: {
+                        top: 0.3,
+                        bottom: 0.25,
+                    },
+                    borderVisible: false,
+                },
+                timeScale: {
+                    rightBarStaysOnScroll: true,
+                }
+            }
+        );
+        this.areaSeries = this.chart.addAreaSeries({
+            topColor: 'rgba(38,198,218, 0.56)',
+            bottomColor: 'rgba(38,198,218, 0.04)',
+            lineColor: 'rgba(38,198,218, 1)',
+            lineWidth: 2,
+        });
     }
 
     dateInterval(intervalday) {
@@ -27,15 +62,14 @@ class Chart extends Component {
     }
 
     async fetchData() {
-        //const corsProxy = "https://thingproxy.freeboard.io/fetch/"
         const apiLink = "https://api.nomics.com/v1/currencies/sparkline";
-        const demoKey = "key=demo-6410726746980cead2a17c9db9ef29af";
-        const coinToFetch = "ids=" + this.props.coin.coinID;
-        const dateInterval = this.dateInterval(this.props.coin.timeInterval);
+        const apiKey = "key=" + process.env.REACT_APP_API_KEY;
+        const coinToFetch = "ids=" + this.props.id;
+        const dateInterval = this.dateInterval(this.props.timeInterval);
         const startDate = "start=" + dateInterval[0];
         const endDate = "end=" + dateInterval[1];
         const hourSuffix = "T00%3A00%3A00Z";
-        const resultLink = apiLink + "?" + demoKey + "&" + coinToFetch + "&" + startDate + hourSuffix + "&" + endDate + hourSuffix;
+        const resultLink = apiLink + "?" + apiKey + "&" + coinToFetch + "&" + startDate + hourSuffix + "&" + endDate + hourSuffix;
         const response = await fetch(resultLink);
         const json = await response.json();
         const readyChartData = (json) => {

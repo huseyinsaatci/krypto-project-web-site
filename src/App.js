@@ -1,13 +1,12 @@
 import { Route, Switch } from 'react-router-dom';
-import Content from './Content';
-import MainPage from './MainPage';
+import CoinPage from './coin_page/CoinPage';
+import MainPage from './main_page/MainPage';
 
 function App() {
-  //<MobileappStand></MobileappStand>
   return (
     <Switch>
       <Route path="/" exact component={MainPage} />
-      <Route path="/:coinID" component={Content} />
+      <Route path="/:coinID" component={CoinPage} />
     </Switch>
   );
 }
