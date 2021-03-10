@@ -94,7 +94,7 @@ function TableItem(props) {
                         </div>
                     </div>
                 </div>
-                <div className="col-2 my-auto">{parseData(props.coinVolume)}</div>
+                <div className="col-2 my-auto">${parseData(props.coinVolume)}</div>
             </li>
         </Link>
     );

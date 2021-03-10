@@ -28,7 +28,7 @@ function Footer() {
                         </div>
                         <div className="col text-end">
                             <p>TradingView Lightweight Charts</p>
-                            <a href="https://www.tradingview.com">Copyright (с) 2020 TradingView, Inc.</a>
+                            <a href="https://www.tradingview.com">Copyright (с) {new Date().getFullYear()} TradingView, Inc.</a>
                         </div>
                     </div>
                 </div>
