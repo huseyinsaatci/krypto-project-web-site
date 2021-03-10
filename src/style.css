@@ -159,22 +159,9 @@ ul {
     background-color: #0e1029;
 }
 
-.b-dark-gradienty{
-    background-image: linear-gradient(135deg, #21284a 0%, #332640 100%);
-}
-
-.b-dark-gradientx{
-    background: #232526;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-}
-
 .dark-gradient-b{
     background: #485563;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #102438, #485563);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #102438, #485563); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
 }
-
-

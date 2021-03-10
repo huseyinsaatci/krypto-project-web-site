@@ -1,18 +1,22 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { createChart } from 'lightweight-charts';
-require('dotenv').config();
 
-class Chart extends Component {
+class Chart extends PureComponent {
     constructor(props) {
         super(props);
         this.ref = React.createRef();
         this.fetchData = this.fetchData.bind(this);
     }
 
+    toTimestamps(strDate) {
+        const datum = Date.parse(strDate);
+        return datum / 1000;
+    }
+
     async componentDidMount() {
         this.chart = createChart(this.ref.current, {
             width: 550,
-            height: 395,
+            height: 385,
         });
         this.chart.applyOptions(
             {
@@ -38,6 +42,7 @@ class Chart extends Component {
                 },
                 timeScale: {
                     rightBarStaysOnScroll: true,
+                    timeVisible: this.props.isTimeVisible,
                 }
             }
         );
@@ -64,30 +69,31 @@ class Chart extends Component {
 
     async fetchData() {
         const corsProxy = "https://arcane-temple-76069.herokuapp.com/"
-        const apiLink = "https://api.nomics.com/v1/currencies/sparkline";
-        const apiKey = "key=" + process.env.REACT_APP_API_KEY;
-        const coinToFetch = "ids=" + this.props.id;
-        const dateInterval = this.dateInterval(this.props.timeInterval);
-        const startDate = "start=" + dateInterval[0];
-        const endDate = "end=" + dateInterval[1];
-        const hourSuffix = "T00%3A00%3A00Z";
-        const resultLink = corsProxy + apiLink + "?" + apiKey + "&" + coinToFetch + "&" + startDate + hourSuffix + "&" + endDate + hourSuffix;
+        const apiLink = "https://heroku-vue-express.herokuapp.com/sparkline/";
+        const dateInterval = this.props.timeInterval + "/";
+        const coinID = this.props.id;
+        const resultLink = corsProxy + apiLink + dateInterval + coinID;
         const response = await fetch(resultLink);
         const json = await response.json();
         const readyChartData = (json) => {
             const data = [];
             for (let index = 0; index < json.prices.length; index++) {
-                data[index] = { "time": json.timestamps[index], "value": json.prices[index] };
+                data[index] = { "time": this.toTimestamps(json.timestamps[index]), "value": json.prices[index] };
             }
             return data;
         }
-        return readyChartData(json[0]);
+        return readyChartData(json);
     }
 
     async drawChart() {
         const data = await this.fetchData();
         this.areaSeries.setData(data);
         this.chart.timeScale().fitContent();
+        this.chart.applyOptions({
+            timeScale: {
+                timeVisible: this.props.isTimeVisible,
+            }
+        })
     }
 
     render() {
