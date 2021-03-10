@@ -68,7 +68,7 @@ class CoinTable extends Component {
 
 
 function TableItem(props) {
-    const parseData = (number) => { return (Number.parseFloat(number)).toFixed(2) };
+    const parseData = (number) => { return (Number.parseFloat(number).toLocaleString()) };
     const change = parseData((props.coinPercentage) * 100);
     const color = change < 0 ? "red" : "green";
     return (

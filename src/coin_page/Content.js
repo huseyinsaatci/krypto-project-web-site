@@ -69,7 +69,7 @@ class Content extends Component {
 
 class PriceStatistics extends Component {
     render() {
-        const parseData = (number) => { return (Number.parseFloat(number)).toFixed(2) };
+        const parseData = (number) => { return (Number.parseFloat(number)).toLocaleString() };
         const { coin } = this.props;
         const { state } = this.props;
         return (
@@ -146,7 +146,7 @@ class StatsOutline extends Component {
     }
 
     render() {
-        const parseData = (number) => { return (Number.parseFloat(number)).toFixed(2) };
+        const parseData = (number) => { return (Number.parseFloat(number).toLocaleString()) };
         const { coin } = this.props;
         return (
             <div className="container mb-4 mt-2 fs-5_6">
@@ -179,7 +179,7 @@ class StatsOutline extends Component {
                             </div>
                             <div className="row m-1 pb-3">
                                 <div className="col">
-                                    ${coin["1d"].volume}
+                                    ${parseData(coin["1d"].volume)}
                                 </div>
                             </div>
                             <div className="row m-1 pb-2">
@@ -197,7 +197,7 @@ class StatsOutline extends Component {
                             </div>
                             <div className="row m-1 pb-3">
                                 <div className="col">
-                                    ${coin.market_cap}
+                                    ${parseData(coin.market_cap)}
                                 </div>
                             </div>
                             <div className="row m-1 pb-2">
@@ -215,7 +215,7 @@ class StatsOutline extends Component {
                             </div>
                             <div className="row m-1 pb-3">
                                 <div className="col">
-                                    ${coin.circulating_supply}
+                                    {parseData(coin.circulating_supply)}
                                 </div>
                             </div>
                         </div>
@@ -229,7 +229,7 @@ class StatsOutline extends Component {
 class CoinStand extends Component {
     render() {
         const { coin } = this.props;
-        const parseData = (number) => { return (Number.parseFloat(number)).toFixed(2) };
+        const parseData = (number) => { return (Number.parseFloat(number)).toLocaleString() };
         const change = parseData((coin["1d"].price_change_pct) * 100);
 
         return (
@@ -245,7 +245,7 @@ class CoinStand extends Component {
                         <div className="col text-end border border-start-0 border-primary p-3 rad-10-right">
                             <div className="col">
                                 <span className="fs-1">
-                                    ${(Number.parseFloat(coin.price)).toFixed(4)}
+                                    ${parseData(coin.price)}
                                     {icons.changeVisualizer(change, "p-1 ms-3 fs-4 align-middle")}
                                 </span>
                             </div>
