@@ -16,7 +16,7 @@ class Chart extends PureComponent {
     async componentDidMount() {
         this.chart = createChart(this.ref.current, {
             width: 550,
-            height: 385,
+            height: 383,
         });
         this.chart.applyOptions(
             {
@@ -52,19 +52,6 @@ class Chart extends PureComponent {
             lineColor: 'rgba(38,198,218, 1)',
             lineWidth: 2,
         });
-    }
-
-    dateInterval(intervalday) {
-        const reverseString = (str) => { return str.split("-").reverse().join("-"); }
-        const endDate = reverseString(new Date().toLocaleDateString("tr-TR").replaceAll(".", "-"));
-        const [day, month, year] = new Date().toLocaleDateString("tr-TR").split(".");
-        let totalDay = parseInt(day) + (parseInt(month) * 30) + (parseInt(year) * 365);
-        totalDay -= intervalday;
-        const resultYear = Math.floor(totalDay / 365);
-        const resultMonth = Math.floor((totalDay % 365) / 30) - 1;
-        const resultDay = (totalDay % 365) % 30;
-        const startDate = reverseString(new Date(resultYear, resultMonth, resultDay).toLocaleDateString("tr-TR").replaceAll(".", "-"));
-        return [startDate, endDate];
     }
 
     async fetchData() {
