@@ -166,7 +166,7 @@ class StatsOutline extends Component {
                             </div>
                             <div className="row m-1 pb-2">
                                 <div className="col">
-                                    {icons.changeVisualizer(parseData(coin["1d"].price_change_pct), "p-1")}
+                                    {icons.changeVisualizer(parseData(coin["1d"].price_change_pct * 100), "p-1")}
                                 </div>
                             </div>
                         </div>
@@ -184,7 +184,7 @@ class StatsOutline extends Component {
                             </div>
                             <div className="row m-1 pb-2">
                                 <div className="col">
-                                    {icons.changeVisualizer(parseData(coin["1d"].volume_change_pct), "p-1")}
+                                    {icons.changeVisualizer(parseData(coin["1d"].volume_change_pct * 100), "p-1")}
                                 </div>
                             </div>
                         </div>
@@ -202,7 +202,7 @@ class StatsOutline extends Component {
                             </div>
                             <div className="row m-1 pb-2">
                                 <div className="col">
-                                    {icons.changeVisualizer(parseData(coin["1d"].market_cap_change_pct), "p-1")}
+                                    {icons.changeVisualizer(parseData(coin["1d"].market_cap_change_pct * 100), "p-1")}
                                 </div>
                             </div>
                         </div>
