@@ -363,7 +363,7 @@ class ChartTable extends PureComponent {
                         <input
                             type="radio"
                             className="btn-check"
-                            onClick={() => { this.setState({ dateInterval: "weekly", isTimeVisible: false }) }}
+                            onClick={() => { this.setState({ dateInterval: "weekly", isTimeVisible: true }) }}
                             name="btnradio"
                             id="btnradio2"
                             autoComplete="off" />

@@ -1,7 +1,6 @@
 import coin_colors from './coin_data.json';
 import '../style.css'
 
-
 export const cryptoCoinIconDefault = (id, classProps) => {
     return (
         <span
@@ -32,28 +31,6 @@ export const changeVisualizer = (change, styleProps) => {
                 style={{ styleProps }}
                 data-icon={arrowIcon}>
             </span> {change}%
-        </span>
-    );
-}
-
-export const downArrow = (classProps, styleProps) => {
-    return (
-        <span
-            className={"iconify " + classProps}
-
-            style={{ color: [styleProps] }}
-            data-icon="bi-arrow-down-square-fill">
-        </span>
-    );
-}
-
-export const upArrow = (classProps, styleProps) => {
-    return (
-        <span
-            className={"iconify " + classProps}
-
-            style={{ color: [styleProps] }}
-            data-icon="bi-arrow-up-square-fill">
         </span>
     );
 }
