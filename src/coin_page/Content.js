@@ -237,7 +237,7 @@ class CoinStand extends Component {
                 <div className="row">
                     <div className="row my-3 mx-auto">
                         <div className="col text-start border border-end-0 border-primary p-3 rad-10-left">
-                            {icons.cryptoCoinIconCustom(coin.id, "icon-big me-2")}
+                            <img src={coin.logo_url} alt="coin_logo" className=" image-fluid icon-dark icon-1 me-3 circle" />
                             <span className="fs-1">
                                 {coin.name}
                             </span>
@@ -277,10 +277,7 @@ class CoinConverter extends Component {
                 <div className="container rad-10-top " style={{ backgroundColor: coin_colors[coin.id] }}>
                     <div className="row p-2">
                         <div className="col-2 my-auto">
-                            <span
-                                className="iconify image-fluid icon-big"
-                                data-icon={"cryptocurrency:" + coin.id.toLowerCase()} >
-                            </span>
+                            <img src={coin.logo_url} alt="coin_logo" className=" image-fluid icon-dark icon-1 me-3 circle" />
                         </div>
                         <div className="col-4 my-auto">
                             <div className="row pastel">{coin.id}</div>

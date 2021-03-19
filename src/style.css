@@ -1,166 +1,299 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display: block;}
-body { line-height: 1;}
-ol,ul { list-style: none;}
-blockquote,q { quotes: none;}
-blockquote:before,blockquote:after,q:before,q:after { content: ''; content: none;}
-table { border-collapse: collapse; border-spacing: 0;}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
 a {
-    text-decoration: none;
-    color: #d4d4d4;
+  text-decoration: none;
+  color: #d4d4d4;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
-.fs-4_5{
-    font-size:large;
+.fs-4_5 {
+  font-size: large;
 }
 
-.footer a{
-    color: #d4d4d4;
+.footer a {
+  color: #d4d4d4;
 }
 
-.dark-b{
-    background-color: #131722;
+.dark-b {
+  background-color: #131722;
 }
-
 
 .font {
-    font-family: 'Poppins', sans-serif;
-    color: #d4d4d4;
+  font-family: "Poppins", sans-serif;
+  color: #d4d4d4;
 }
 
-.list-border{
-    vertical-align:middle;
-    border-bottom: 1px solid grey;
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+.list-border {
+  vertical-align: middle;
+  border-bottom: 1px solid grey;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
-.list-border:hover{
-    border-color:#1C6EA4;
+.list-border:hover {
+  border-color: #1c6ea4;
 }
 
-.rad-20{
-    border-radius: 20px;
+.rad-20 {
+  border-radius: 20px;
 }
 
-.green{
-    color: #16c784;
+.green {
+  color: #16c784;
 }
 
-.red{
-    color: #ea3943;
+.red {
+  color: #ea3943;
 }
 
-.grey{
-    color: grey;
+.grey {
+  color: grey;
 }
 
-.horizontal-center{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.horizontal-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.percentage{
-    padding: 0.3rem;
-    color: #fff;
+.percentage {
+  padding: 0.3rem;
+  color: #fff;
 }
 
-.rad-10{
-    border-radius: 10px;
+.rad-10 {
+  border-radius: 10px;
 }
 
-.red-b{
-    background-color: #ea3943;
+.red-b {
+  background-color: #ea3943;
 }
 
-.green-b{
-    background-color: #1b8059;
+.green-b {
+  background-color: #1b8059;
 }
 
-.blue-b{
-    background-color: #8fc2c4;
+.blue-b {
+  background-color: #8fc2c4;
 }
 
-.pastel{
-    opacity: 0.7;
+.pastel {
+  opacity: 0.7;
 }
 
-.input{
-    caret-color:black ;
-    text-align: right;
-    color: white !important;
-    font-size:large;
+.input {
+  caret-color: black;
+  text-align: right;
+  color: white !important;
+  font-size: large;
 }
 
-.input-dollar{
-    caret-color:black ;
-    text-align: right;
-    color: #212529 !important;
-    font-size:large;
+.input-dollar {
+  caret-color: black;
+  text-align: right;
+  color: #212529 !important;
+  font-size: large;
 }
 
-.rad-10-top{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+.rad-10-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-.rad-10-left{
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+.rad-10-left {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
-.rad-10-right{
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+.rad-10-right {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
-.rad-10-bottom{
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+.rad-10-bottom {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
-.icon{
-    height: 25px;
-    width:25px;
+.icon-dark {
+  filter: gray;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
 }
 
-.icon-big{
-    font-size: 40px;
+.circle {
+  border-radius: 50%;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
 
-.icon-dollar{
-    font-size: 45px;
-    color: #16c784;
+.icon-1 {
+  height: 40px;
+  width: 40px;
 }
 
-.fs-5_6{
-    font-size: 19px;
+.icon-2 {
+  height: 25px;
+  width: 25px;
 }
 
-.fs-7{
-    font-size: 13px;
+.icon-big {
+  font-size: 40px;
 }
 
-.rad-5{
-    border-radius: 5px;
+.icon-dollar {
+  font-size: 45px;
+  color: #16c784;
 }
 
-.p-0_5{
-    padding: 2px;
+.fs-5_6 {
+  font-size: 19px;
 }
 
-.dark-blue-b{
-    background-color: #0e1029;
+.fs-7 {
+  font-size: 13px;
 }
 
-.dark-gradient-b{
-    background: #485563;
-    background: -webkit-linear-gradient(to right, #102438, #485563);
-    background: linear-gradient(to right, #102438, #485563);
+.rad-5 {
+  border-radius: 5px;
+}
+
+.p-0_5 {
+  padding: 2px;
+}
+
+.dark-blue-b {
+  background-color: #0e1029;
+}
+
+.dark-gradient-b {
+  background: #485563;
+  background: -webkit-linear-gradient(to right, #102438, #485563);
+  background: linear-gradient(to right, #102438, #485563);
 }

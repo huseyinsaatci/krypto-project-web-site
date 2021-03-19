@@ -77,7 +77,7 @@ function TableItem(props) {
                 <div className="col-2 my-auto">
                     <div className="row">
                         <div className="col-2">
-                            <img src={props.coinLogo} alt="coin_logo" className=" image-fluid icon me-3" />
+                            <img src={props.coinLogo} alt="coin_logo" className=" image-fluid icon-2 me-3 circle" />
                         </div>
                         <div className="col-10 my-auto">{props.coinId}</div>
                     </div>
