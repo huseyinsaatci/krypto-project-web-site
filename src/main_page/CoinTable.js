@@ -25,10 +25,8 @@ class CoinTable extends Component {
     }
 
     async fetchData() {
-        const corsProxy = "https://arcane-temple-76069.herokuapp.com/"
         const apiLink = "https://krypto-api.herokuapp.com/coins/relevant";
-        const resultLink = corsProxy + apiLink;
-        const response = await fetch(resultLink);
+        const response = await fetch(apiLink);
         let json = await response.json();
         this.setState({ data: json });
     }

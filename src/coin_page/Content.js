@@ -25,12 +25,11 @@ class Content extends Component {
     }
 
     async fetchData() {
-        const corsProxy = "https://arcane-temple-76069.herokuapp.com/"
         const apiLink = "https://krypto-api.herokuapp.com/";
-        const coinLink = corsProxy + apiLink + "coins/" + this.props.coinID;
+        const coinLink = apiLink + "coins/" + this.props.coinID;
         const coinResponse = await fetch(coinLink);
         let coinJSON = await coinResponse.json();
-        const statLink = corsProxy + apiLink + "stats/" + this.props.coinID;
+        const statLink = apiLink + "stats/" + this.props.coinID;
         const statResponse = await fetch(statLink);
         let statJSON = await statResponse.json();
         this.setState({ coin: coinJSON });
