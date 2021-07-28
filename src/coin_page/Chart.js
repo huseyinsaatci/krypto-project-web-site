@@ -55,11 +55,10 @@ class Chart extends PureComponent {
     }
 
     async fetchData() {
-        const corsProxy = "https://arcane-temple-76069.herokuapp.com/"
         const apiLink = "https://krypto-api.herokuapp.com/sparkline/";
         const dateInterval = this.props.timeInterval + "/";
         const coinID = this.props.id;
-        const resultLink = corsProxy + apiLink + dateInterval + coinID;
+        const resultLink = apiLink + dateInterval + coinID;
         const response = await fetch(resultLink);
         const json = await response.json();
         const readyChartData = (json) => {
